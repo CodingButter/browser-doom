@@ -1,5 +1,9 @@
 # browser-doom
 
+<p align="center">
+  <img src="resources/images/Browser-Doom.jpg" alt="Browser DOOM cover art" width="400">
+</p>
+
 A TypeScript port of id Software's `linuxdoom-1.10`, running in the browser on Bun.
 
 <!-- progress:start -->
