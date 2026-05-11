@@ -7,9 +7,9 @@
 A TypeScript port of id Software's `linuxdoom-1.10`, running in the browser on Bun.
 
 <!-- progress:start -->
-**Port progress:** 12 / 91 issues closed (13%)
+**Port progress:** 11 / 90 issues closed (12%)
 
-![Progress](https://progress-bar.xyz/13/?title=ported&width=400)
+![Progress](https://progress-bar.xyz/12/?title=ported&width=400)
 <!-- progress:end -->
 
 ![Issues closed](https://img.shields.io/github/issues-closed/CodingButter/browser-doom?label=ported&color=brightgreen)
