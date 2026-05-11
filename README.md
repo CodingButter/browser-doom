@@ -2,11 +2,17 @@
 
 A TypeScript port of id Software's `linuxdoom-1.10`, running in the browser on Bun.
 
+<!-- progress:start -->
+**Port progress:** 9 / 89 issues closed (10%)
+
+![Progress](https://progress-bar.xyz/10/?title=ported&width=400)
+<!-- progress:end -->
+
 ![Issues closed](https://img.shields.io/github/issues-closed/CodingButter/browser-doom?label=ported&color=brightgreen)
 ![Issues open](https://img.shields.io/github/issues/CodingButter/browser-doom?label=remaining)
 ![Milestones](https://img.shields.io/github/milestones/all/CodingButter/browser-doom)
 
-Progress is tracked as one [milestone](https://github.com/CodingButter/browser-doom/milestones) per subsystem folder (`src/w`, `src/r`, `src/p`, ...) with one issue per source/header pair.
+Progress is tracked as one [milestone](https://github.com/CodingButter/browser-doom/milestones) per subsystem folder (`src/w`, `src/r`, `src/p`, ...) with one issue per source/header pair. The progress bar above is rewritten by a GitHub Action on every issue close/open.
 
 ## Run it
 
