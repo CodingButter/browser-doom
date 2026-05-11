@@ -40,7 +40,7 @@ jobs:
           TOTAL:  ${{ steps.count.outputs.total }}
         run: |
           python3 <<'PY'
-          import os, re, pathlib
+          import os, re, sys, pathlib
           pct, closed, total = os.environ['PCT'], os.environ['CLOSED'], os.environ['TOTAL']
           path = pathlib.Path('README.md')
           src = path.read_text()
@@ -50,15 +50,20 @@ jobs:
               f"![Progress](https://progress-bar.xyz/{pct}/?title=ported&width=400)\n"
               f"<!-- progress:end -->"
           )
-          new = re.sub(
+          new, count = re.subn(
               r"<!-- progress:start -->.*?<!-- progress:end -->",
               block,
               src,
               flags=re.DOTALL,
           )
+          if count == 0:
+              print("ERROR: progress markers not found in README", file=sys.stderr)
+              sys.exit(1)
           if new == src:
-              print("No progress markers found in README — nothing to update.")
-          path.write_text(new)
+              print(f"No change needed (already at {pct}%).")
+          else:
+              path.write_text(new)
+              print(f"README updated to {pct}%.")
           PY
 
       - name: Commit and push if changed
