@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    // Environment setup & latest features
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "types": ["bun"],
+
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false,
+
+    // `src` and `libc` both act as import roots, so `import { byte } from
+    // "d/doomtype.h"` resolves to `./src/d/doomtype.h.ts` and `import { fopen }
+    // from "libc/stdio.h"` resolves to `./libc/stdio.h.ts`. Mirrors C-style
+    // `#include` paths without `../../` chains. The `*` catch-all falls back
+    // to node_modules for unmatched bare specifiers like `react`.
+    "paths": {
+      "libc/*": ["./libc/*.ts"],
+      "*": ["./src/*.ts"]
+    }
+  },
+  "include": ["src/**/*", "libc/**/*", "@types/**/*", "index.ts", "index.html"]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "doom",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-plugin-glsl": "^0.2.2",
+    "bun-plugin-tailwind": "^0.1.2"
+  },
+  "scripts": {
+    "dev": "bun --hot server.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.3.0"
+  }
+}
